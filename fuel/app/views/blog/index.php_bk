@@ -1,0 +1,7 @@
+<?php foreach ($blogs as $item): ?>
+<header>
+	<h2><?php echo $item->title; ?></h2>
+</header>
+<p><?php echo $item->description; ?></p>
+<?php echo Html::anchor('blog/view/'.$item->id, '<i class="fa fa-eye"></i> View', array('class' => 'btn btn-small')); ?>
+<?php endforeach; ?>
