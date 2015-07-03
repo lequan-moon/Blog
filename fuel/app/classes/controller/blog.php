@@ -1,20 +1,15 @@
 <?php
+use helper\BlogHelper;
+
 class Controller_Blog extends Controller_Template
 {
 
 	public function action_index()
 	{
-	    $data = array();
 	    $blogs = Model_Blog::find('all');
-	    if (count($blogs) > 4) {
-	        while (count($blogs) > 4) {
-	            $grid = array_splice($blogs, 0, 4);
-	            $data['grid'][] = $grid;
-	        }
-	        $data['grid'][] = $blogs;
-	    } else {
-	        $data['grid'][] = $blogs;
-	    }
+	    $blogs = BlogHelper::getAuthorName($blogs);
+	    $data = BlogHelper::generateGridFormatData($blogs);
+	    
 		$this->template->title = "Blogs";
 		$this->template->content = View::forge('blog/index', $data);
 	}

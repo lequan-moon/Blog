@@ -31,7 +31,6 @@
 
 			<td><?php echo $item->title; ?></td>
 			<td><?php echo $item->description; ?></td>
-			<td><?php echo $item->content; ?></td>
 			<td>
 				<div class="btn-toolbar">
 					<div class="btn-group">

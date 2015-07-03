@@ -9,6 +9,7 @@ class Model_Blog extends Model
 		'description',
 	    'img',
 		'content',
+	    'author',
 		'created_at',
 		'updated_at',
 	);
