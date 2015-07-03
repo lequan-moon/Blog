@@ -37,7 +37,7 @@ class Controller_Admin extends Controller_Template
 					'title' => Input::post('title'),
 					'description' => Input::post('description'),
 					'content' => Input::post('content'),
-				    'content' => Input::post('img'),
+				    'img' => Input::post('img'),
 				));
 
 				if ($blog and $blog->save())

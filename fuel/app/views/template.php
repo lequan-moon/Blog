@@ -54,8 +54,8 @@
 				<div class="head-nav">
 					<span class="menu"> </span>
 						<ul class="cl-effect-15">
-						<li class="active"><a href="index.html">HOME</a></li>
-							<li><a href="about.html" data-hover="ABOUT">ABOUT</a></li>
+						<li class="active"><?php echo Html::anchor('blog', 'Blog');?></li>
+							<li><?php echo Html::anchor('admin', 'Admin');?></li>
 							<li><a href="photos.html" data-hover="PHOTOS">PHOTOS</a></li>
 							<li><a href="404.html" data-hover="ARCHIVES">ARCHIVES</a></li>
 							<li><a href="contact.html" data-hover="CONTACT">CONTACT</a></li>
