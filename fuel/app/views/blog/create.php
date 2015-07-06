@@ -4,4 +4,4 @@
 <?php echo render('blog/_form'); ?>
 
 
-<p><?php echo Html::anchor('admin', 'Back'); ?></p>
+<p><?php echo Html::anchor('admin', '<i class="fa fa-reply">Back</i>'); ?></p>

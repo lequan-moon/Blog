@@ -6,6 +6,7 @@
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<?php echo Asset::css('font-awesome.min.css'); ?>
 	<?php echo Asset::css('style.css'); ?>
+	<?php echo Asset::css('poststyle.css'); ?>
 	<?php echo Asset::js('jquery.min.js', array(), null, false); ?>
 	<script>
 		$(document).ready(function () {
@@ -23,7 +24,7 @@
 		});
 	</script>
 	<style>
-		body { margin: 40px; }
+/* 		body { margin: 40px; } */
 	</style>
 </head>
 <body>
@@ -32,7 +33,7 @@
 	<div class="container">
 		<div class="header">
 			<div class="logo">
-				<a href="index.html"><?php echo Asset::img('logo.png', array('class' => 'img-responsive'));?></a>
+				<a href="blog"><?php echo Asset::img('logo.png', array('class' => 'img-responsive'));?></a>
 			</div>
 			<div class="header-right">
 				<ul>
@@ -55,10 +56,10 @@
 					<span class="menu"> </span>
 						<ul class="cl-effect-15">
 						<li class="active"><?php echo Html::anchor('blog', 'Blog');?></li>
-							<li><?php echo Html::anchor('admin', 'Admin');?></li>
-							<li><a href="photos.html" data-hover="PHOTOS">PHOTOS</a></li>
-							<li><a href="404.html" data-hover="ARCHIVES">ARCHIVES</a></li>
-							<li><a href="contact.html" data-hover="CONTACT">CONTACT</a></li>
+							<li><?php //echo Html::anchor('admin', 'Admin');?></li>
+<!-- 							<li><a href="photos.html" data-hover="PHOTOS">PHOTOS</a></li> -->
+<!-- 							<li><a href="404.html" data-hover="ARCHIVES">ARCHIVES</a></li> -->
+<!-- 							<li><a href="contact.html" data-hover="CONTACT">CONTACT</a></li> -->
 								<div class="clearfix"> </div>
 						</ul>
 				</div>
@@ -75,9 +76,9 @@
 	</div> 
 </div>
 <!-- header -->
-
+<div class="content">
 <?php echo $content;?>
-
+</div>
 <!-- footer -->
 	<div class="footer">
 		<div class="container">
@@ -93,31 +94,11 @@
 			</div>
 			<div class="col-md-3 copy">
 				<div class="top1">
-					<i class="men"></i>
-				</div>
-				<div class="top2">
-					<h6>Template by: </h6>
-					<p><a href="http://w3layouts.com/">W3layouts</a></p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="col-md-3 copy">
-				<div class="top1">
-					<i class="app"></i>
-				</div>
-				<div class="top2">
-					<h6>Images From: </h6>
-					<p><a href="#"> www.wallcoo.net</a></p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="col-md-3 copy">
-				<div class="top1">
 					<i class="lik"></i>
 				</div>
 				<div class="top2">
-					<h6>Website </h6>
-					<p><a href="#"> www.yourblog.com</a></p>
+					<h6>Shitty coder </h6>
+					<p><a href="#">shittycoder</a></p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>

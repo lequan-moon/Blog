@@ -1,5 +1,11 @@
+<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+<script type="text/javascript">bkLib.onDomLoaded(
+		function() {
+		  new nicEditor({fullPanel : true}).panelInstance('form_content');
+		    });</script>
+						
 <?php echo Form::open(array("class"=>"form-horizontal")); ?>
-
+<div class="main-content">
 	<fieldset>
 		<div class="form-group">
 			<?php echo Form::label('Title', 'title', array('class'=>'control-label')); ?>
@@ -30,3 +36,4 @@
 			<?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-primary')); ?>		</div>
 	</fieldset>
 <?php echo Form::close(); ?>
+</div>

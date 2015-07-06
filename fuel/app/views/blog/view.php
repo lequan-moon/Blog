@@ -1,12 +1,12 @@
-<h2>Viewing <span class='muted'>#<?php echo $blog->id; ?></span></h2>
+<div class="main-content">
+    <h2><?php echo $blog->title; ?></h2>
 
-<p>
-	<strong>Title:</strong>
-	<?php echo $blog->title; ?></p>
-<p>
-	<strong>Description:</strong>
-	<?php echo $blog->description; ?></p>
-<p>
-	<strong>Content:</strong>
-	<?php echo $blog->content; ?></p>
-
+    <div id="post-description">
+    	<?php echo $blog->description; ?>
+    </div>
+    <div class="clearfix"></div>
+    <div id="post-content">
+    	<?php echo $blog->content; ?>
+    </div>
+    <div class="clearfix"></div>
+</div>

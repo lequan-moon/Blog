@@ -1,9 +1,14 @@
 <?php
+use helper\Util;
+use Fuel\Core\Response;
 class Controller_Admin extends Controller_Template
 {
 
 	public function action_index()
 	{
+	    if (!Util::isLogin()) {
+	        Response::redirect("login");
+	    }
 		$data['blogs'] = Model_Blog::find('all');
 		$this->template->title = "Blogs";
 		$this->template->content = View::forge('admin/index', $data);
@@ -12,6 +17,9 @@ class Controller_Admin extends Controller_Template
 
 	public function action_view($id = null)
 	{
+	    if (!Util::isLogin()) {
+	        Response::redirect("login");
+	    }
 		is_null($id) and Response::redirect('blog');
 
 		if ( ! $data['blog'] = Model_Blog::find($id))
@@ -27,6 +35,9 @@ class Controller_Admin extends Controller_Template
 
 	public function action_create()
 	{
+	    if (!Util::isLogin()) {
+	        Response::redirect("login");
+	    }
 		if (Input::method() == 'POST')
 		{
 			$val = Model_Blog::validate('create');
@@ -65,6 +76,9 @@ class Controller_Admin extends Controller_Template
 
 	public function action_edit($id = null)
 	{
+	    if (!Util::isLogin()) {
+	        Response::redirect("login");
+	    }
 		is_null($id) and Response::redirect('blog');
 
 		if ( ! $blog = Model_Blog::find($id))
@@ -117,6 +131,9 @@ class Controller_Admin extends Controller_Template
 
 	public function action_delete($id = null)
 	{
+	    if (!Util::isLogin()) {
+	        Response::redirect("login");
+	    }
 		is_null($id) and Response::redirect('blog');
 
 		if ($blog = Model_Blog::find($id))

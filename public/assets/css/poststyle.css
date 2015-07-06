@@ -1,0 +1,16 @@
+.main-content {
+	width: 70%;
+	margin: 40px;
+}
+#post-description {
+	font-style: italic;
+	padding: 20px;
+	background: gray;
+	border-radius: 10px;
+}
+
+#post-content {
+	margin-top: 15px;
+	font-family: tahoma;
+	font-size: large;
+}

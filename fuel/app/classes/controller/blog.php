@@ -11,7 +11,7 @@ class Controller_Blog extends Controller_Template
 	    $data = BlogHelper::generateGridFormatData($blogs);
 	    
 		$this->template->title = "Blogs";
-		$this->template->content = View::forge('blog/index', $data);
+		$this->template->content = View::forge('blog/index', $data, false);
 	}
 	
 	public function action_view($id = null)
@@ -25,7 +25,7 @@ class Controller_Blog extends Controller_Template
 	    }
 	
 	    $this->template->title = "Blog";
-	    $this->template->content = View::forge('blog/view', $data);
+	    $this->template->content = View::forge('blog/view', $data, false);
 	
 	}
 }
