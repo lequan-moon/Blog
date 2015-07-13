@@ -31,7 +31,7 @@ class Model_Blog extends Model
 		$val->add_field('title', 'Title', 'required|max_length[255]');
 		$val->add_field('description', 'Description', 'required');
 		$val->add_field('content', 'Content', 'required');
-		$val->add_field('img', 'Thumbnail', 'required');
+// 		$val->add_field('img', 'Thumbnail', 'required');
 
 		return $val;
 	}

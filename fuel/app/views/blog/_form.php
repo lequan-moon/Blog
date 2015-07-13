@@ -4,7 +4,7 @@
 		  new nicEditor({fullPanel : true}).panelInstance('form_content');
 		    });</script>
 						
-<?php echo Form::open(array("class"=>"form-horizontal")); ?>
+<?php echo Form::open(array("class"=>"form-horizontal", 'enctype' => 'multipart/form-data')); ?>
 <div class="main-content">
 	<fieldset>
 		<div class="form-group">
@@ -28,12 +28,12 @@
 		<div class="form-group">
 			<?php echo Form::label('Thumbnail', 'img', array('class'=>'control-label')); ?>
 
-				<?php echo Form::input('img', Input::post('img', isset($blog) ? $blog->img : ''), array('class' => 'col-md-8 form-control', 'rows' => 8, 'placeholder'=>'Thumbnail')); ?>
-
+                <?php echo FORM::file('filename'); ?> 
 		</div>
 		<div class="form-group">
 			<label class='control-label'>&nbsp;</label>
 			<?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-primary')); ?>		</div>
 	</fieldset>
 <?php echo Form::close(); ?>
+    
 </div>

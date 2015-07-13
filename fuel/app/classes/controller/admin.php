@@ -1,6 +1,7 @@
 <?php
 use helper\Util;
 use Fuel\Core\Response;
+use Fuel\Core\Upload;
 class Controller_Admin extends Controller_Template
 {
 
@@ -44,12 +45,30 @@ class Controller_Admin extends Controller_Template
 
 			if ($val->run())
 			{
-				$blog = Model_Blog::forge(array(
-					'title' => Input::post('title'),
-					'description' => Input::post('description'),
-					'content' => Input::post('content'),
-				    'img' => Input::post('img'),
-				));
+			    $blog = Model_Blog::forge(array(
+			        'title' => Input::post('title'),
+			        'description' => Input::post('description'),
+			        'content' => Input::post('content'),
+			    ));
+			    
+			    // Custom configuration for this upload
+			    $config = array(
+			        'path' => DOCROOT.DS.'assets/img',
+			        'randomize' => true,
+			        'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png'),
+			    );
+			    Upload::process($config);
+			    
+			    // if a valid file is passed than the function will save, or if its not empty
+			    if (Upload::is_valid())
+			    {
+			        // save them according to the config
+			        Upload::save();
+			    
+			        //if you want to save to tha database lets grab the file name
+			        $value = Upload::get_files();
+			        $blog->img = $value[0]['saved_as'];
+			    }
 
 				if ($blog and $blog->save())
 				{
