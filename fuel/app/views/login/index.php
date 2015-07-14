@@ -32,14 +32,14 @@
 						<h1>Sign In</h1>
 				<form method="POST">
 					<li>
-						<input type="text" class="text" placeholder="User Name" name="username"><a href="#" class=" icon user"></a>
+						<input type="text" class="text" placeholder="User Name" name="username" tabindex=0><a href="#" class=" icon user"></a>
 					</li>
 					<li>
-						<input type="password" placeholder="Password" name="password"><a href="#" class=" icon lock"></a>
+						<input type="password" placeholder="Password" name="password" tabindex=1><a href="#" class=" icon lock"></a>
 					</li>
 					
 					 <div class ="forgot">
-						<input type="submit" value="Sign In" > <a href="#" class=" icon arrow"></a>                                                                                                                                                                                                                                 </h4>
+						<input type="submit" value="Sign In"  tabindex=2> <a href="#" class=" icon arrow"></a>                                                                                                                                                                                                                                 </h4>
 					</div>
 				</form>
 			</div>

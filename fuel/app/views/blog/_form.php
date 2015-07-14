@@ -3,9 +3,8 @@
 		function() {
 		  new nicEditor({fullPanel : true}).panelInstance('form_content');
 		    });</script>
-						
-<?php echo Form::open(array("class"=>"form-horizontal", 'enctype' => 'multipart/form-data')); ?>
 <div class="main-content">
+<?php echo Form::open(array("class"=>"form-horizontal", 'enctype' => 'multipart/form-data')); ?>
 	<fieldset>
 		<div class="form-group">
 			<?php echo Form::label('Title', 'title', array('class'=>'control-label')); ?>
@@ -35,5 +34,7 @@
 			<?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-primary')); ?>		</div>
 	</fieldset>
 <?php echo Form::close(); ?>
-    
+<?php 
+    echo (isset($blog) ? Asset::img($blog->img, array('class' => 'img-responsive')) : '');
+?>
 </div>
