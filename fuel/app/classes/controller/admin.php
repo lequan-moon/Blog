@@ -48,6 +48,7 @@ class Controller_Admin extends Controller_Template
 			    $blog = Model_Blog::forge(array(
 			        'title' => Input::post('title'),
 			        'description' => Input::post('description'),
+			        'keywords' => Input::post('keywords'),
 			        'content' => Input::post('content'),
 			    ));
 			    
@@ -112,6 +113,7 @@ class Controller_Admin extends Controller_Template
 		{
 			$blog->title = Input::post('title');
 			$blog->description = Input::post('description');
+			$blog->keywords = Input::post('keywords');
 			$blog->content = Input::post('content');
 			
 			// Custom configuration for this upload
@@ -152,6 +154,7 @@ class Controller_Admin extends Controller_Template
 			{
 				$blog->title = $val->validated('title');
 				$blog->description = $val->validated('description');
+				$blog->keywords = $val->validated('keywords');
 				$blog->content = $val->validated('content');
 				$blog->img = $val->validated('img');
 

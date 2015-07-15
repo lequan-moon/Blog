@@ -7,6 +7,7 @@ class Model_Blog extends Model
 		'id',
 		'title',
 		'description',
+	    'keywords',
 	    'img',
 		'content',
 	    'author',
@@ -30,6 +31,7 @@ class Model_Blog extends Model
 		$val = Validation::forge($factory);
 		$val->add_field('title', 'Title', 'required|max_length[255]');
 		$val->add_field('description', 'Description', 'required');
+		$val->add_field('keywords', 'Keywords', 'required');
 		$val->add_field('content', 'Content', 'required');
 // 		$val->add_field('img', 'Thumbnail', 'required');
 

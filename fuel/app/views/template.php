@@ -2,6 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="description" content="<?php echo(isset($description) ? $description :'A coder\'s blog, a coder\'s life')?>">
+    <meta name="keywords" content="<?php echo(!empty($keywords) ? $keywords : 'Blog, slice of life, tutorial, technical support, code, database');?>">
+    <meta name="author" content="A Coder">
 	<title><?php echo $title; ?></title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<?php echo Asset::css('font-awesome.min.css'); ?>

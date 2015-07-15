@@ -10,7 +10,7 @@ class Controller_Blog extends Controller_Template
 	    $blogs = BlogHelper::getAuthorName($blogs);
 	    $data = BlogHelper::generateGridFormatData($blogs);
 	    
-		$this->template->title = "Blogs";
+		$this->template->title = "Shitcoder";
 		$this->template->content = View::forge('blog/index', $data, false);
 	}
 	
@@ -24,7 +24,9 @@ class Controller_Blog extends Controller_Template
 	        Response::redirect('blog');
 	    }
 	
-	    $this->template->title = "Blog";
+	    $this->template->title = $data['blog']['title'];
+	    $this->template->description = $data['blog']['description'];
+	    $this->template->keywords = $data['blog']['keywords'];
 	    $this->template->content = View::forge('blog/view', $data, false);
 	
 	}

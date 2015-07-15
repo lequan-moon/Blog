@@ -19,6 +19,12 @@
 
 		</div>
 		<div class="form-group">
+			<?php echo Form::label('Keywords', 'keywords', array('class'=>'control-label')); ?>
+
+				<?php echo Form::textarea('keywords', Input::post('keywords', isset($blog) ? $blog->keywords : ''), array('class' => 'col-md-8 form-control', 'rows' => 8, 'placeholder'=>'keywords')); ?>
+
+		</div>
+		<div class="form-group">
 			<?php echo Form::label('Content', 'content', array('class'=>'control-label')); ?>
 
 				<?php echo Form::textarea('content', Input::post('content', isset($blog) ? $blog->content : ''), array('class' => 'col-md-8 form-control', 'rows' => 8, 'placeholder'=>'Content')); ?>
