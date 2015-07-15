@@ -6,7 +6,7 @@ class Controller_Blog extends Controller_Template
 
 	public function action_index()
 	{
-	    $blogs = Model_Blog::find('all');
+	    $blogs = Model_Blog::find('all', array('order_by' => array('id' => 'desc')));
 	    $blogs = BlogHelper::getAuthorName($blogs);
 	    $data = BlogHelper::generateGridFormatData($blogs);
 	    
